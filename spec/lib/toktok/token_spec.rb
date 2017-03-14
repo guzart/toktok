@@ -15,7 +15,6 @@ describe Toktok::Token do
     allow(Toktok).to receive(:config).and_return(config)
   end
 
-
   describe 'encoding' do
     it 'encodes a jwt token when initialized using a subject' do
       token = Toktok::Token.new(subject: 123)
