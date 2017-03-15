@@ -46,7 +46,7 @@ puts token.payload # { sub: 'guzart' }
 
 ## API
 
-# Todo: list public api
+TODO: list public api
 
 ### ::Toktok
 
@@ -54,7 +54,7 @@ puts token.payload # { sub: 'guzart' }
 
 ## Claims
 
-# TODO: describe relation in configuration and in token payload
+TODO: describe relation in configuration and in token payload
 
 ## Development
 
