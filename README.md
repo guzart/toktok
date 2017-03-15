@@ -1,8 +1,8 @@
 # Toktok
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/toktok`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Build Status](https://travis-ci.org/guzart/toktok.svg?branch=master)](https://travis-ci.org/guzart/toktok)
 
-TODO: Delete this and the text above, and describe your gem
+JWT Authentication for Ruby
 
 ## Installation
 
@@ -22,7 +22,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: Improve
+
+**Configuration**
+
+```ruby
+Toktok.algorithm = 'HS256'
+Toktok.secret_key = ENV['MY_SECRET_KEY']
+```
+
+**Encode/Decode**
+
+```ruby
+token = Toktok::Token.new(identity: 'guzart')
+puts token.jwt # 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1...'
+
+token = Toktok::Token.new(jwt: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1...')
+puts token.identity # 'guzart'
+puts token.payload # { sub: 'guzart' }
+```
+
+## API
+
+# Todo: list public api
+
+### ::Toktok
+
+### ::Toktok::Token
+
+## Claims
+
+# TODO: describe relation in configuration and in token payload
 
 ## Development
 
@@ -32,8 +62,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/toktok.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/guzart/toktok.
 
 ## License
 
