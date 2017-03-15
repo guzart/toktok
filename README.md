@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/guzart/toktok.svg?branch=master)](https://travis-ci.org/guzart/toktok)
 [![codecov](https://codecov.io/gh/guzart/toktok/branch/master/graph/badge.svg)](https://codecov.io/gh/guzart/toktok)
 [![Code Climate](https://codeclimate.com/github/guzart/toktok/badges/gpa.svg)](https://codeclimate.com/github/guzart/toktok)
+[![Gem Version](https://badge.fury.io/rb/toktok.svg)](https://badge.fury.io/rb/toktok)
 
 
 JWT Authentication for Ruby
