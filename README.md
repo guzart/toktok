@@ -1,6 +1,8 @@
 # Toktok
 
 [![Build Status](https://travis-ci.org/guzart/toktok.svg?branch=master)](https://travis-ci.org/guzart/toktok)
+[![codecov](https://codecov.io/gh/guzart/toktok/branch/master/graph/badge.svg)](https://codecov.io/gh/guzart/toktok)
+
 
 JWT Authentication for Ruby
 

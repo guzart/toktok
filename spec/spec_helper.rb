@@ -1,6 +1,15 @@
 require 'toktok'
 
 require 'awesome_print'
+require 'simplecov'
+
+SimpleCov.start do
+end
+
+if ENV['CI'] == 'true'
+  require 'codecov'
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
