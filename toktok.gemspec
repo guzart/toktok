@@ -10,7 +10,10 @@ Gem::Specification.new do |spec|
   spec.email         = ['arturo@guzart.com']
 
   spec.summary       = 'Simplify JWT token encoding and decoding for Ruby'
-  spec.description   = 'Simplify JWT token encoding and decoding for Ruby'
+  spec.description   = <<~DOC
+    Simplify JWT token encoding and decoding for Ruby. Use a configuration initializer to standardize the use
+    of JWT encoding/decoding accross your library. Simplifies the use of JWT Claims.
+  DOC
   spec.homepage      = 'https://github.com/guzart/toktok'
   spec.license       = 'MIT'
 
@@ -25,7 +28,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'awesome_print', '~> 1.7'
   spec.add_development_dependency 'bundler', '~> 1.14'
-  spec.add_development_dependency 'codecov'
+  spec.add_development_dependency 'codecov', '~> 0'
   spec.add_development_dependency 'guard', '~> 2.14'
   spec.add_development_dependency 'guard-rspec', '~> 4.7'
   spec.add_development_dependency 'rake', '~> 10.0'
