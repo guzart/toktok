@@ -11,6 +11,9 @@ end
 require 'awesome_print'
 require 'toktok'
 require 'rspec'
+require 'timecop'
+
+Dir[File.join(__dir__, 'support', '**', '*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
