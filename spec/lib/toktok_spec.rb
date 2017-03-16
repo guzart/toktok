@@ -25,5 +25,11 @@ RSpec.describe Toktok do
       expect(Toktok::Configuration).to receive(:new).with(hash_including(algorithm: 'RS384'))
       ::Toktok.config
     end
+
+    it 'uses the ::lifetime value' do
+      ::Toktok.lifetime = 4 * 3_600
+      expect(Toktok::Configuration).to receive(:new).with(hash_including(lifetime: 14_400))
+      ::Toktok.config
+    end
   end
 end

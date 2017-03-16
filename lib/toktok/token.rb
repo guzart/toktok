@@ -54,6 +54,7 @@ module Toktok
     def prepare_payload(identity, extra = nil)
       @payload.merge!(symbolize_keys(extra)) if extra
       @payload[:sub] = identity
+      @payload[:exp] = Time.now.to_i + config.lifetime if config.lifetime.to_i > 0
     end
 
     # Guarantee the order in which the keys are inserted

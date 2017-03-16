@@ -7,6 +7,10 @@ module Toktok
     @algorithm = value
   end
 
+  def self.lifetime=(value)
+    @lifetime = value
+  end
+
   def self.secret_key=(value)
     @secret_key = value
   end
@@ -14,6 +18,7 @@ module Toktok
   def self.config
     ::Toktok::Configuration.new(
       algorithm: @algorithm,
+      lifetime: @lifetime,
       secret_key: @secret_key
     )
   end

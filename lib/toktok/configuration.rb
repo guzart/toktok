@@ -1,11 +1,12 @@
 module Toktok
   class Configuration
-    attr_reader :algorithm, :secret_key
+    attr_reader :algorithm, :lifetime, :secret_key
 
     SecretKeyMissingError = Class.new(StandardError)
 
-    def initialize(algorithm: nil, secret_key: nil)
+    def initialize(algorithm: nil, lifetime: nil, secret_key: nil)
       @algorithm = algorithm || 'HS256'
+      @lifetime = lifetime
       @secret_key = secret_key
 
       if algorithm != 'none' && (secret_key || '') == ''

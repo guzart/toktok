@@ -20,6 +20,11 @@ RSpec.describe Toktok::Configuration do
       expect(config.secret_key).to eq('abcdef')
     end
 
+    it 'accepts a :lifetime argument' do
+      config = Toktok::Configuration.new(algorithm: 'none', lifetime: 3_600)
+      expect(config.lifetime).to eq 3_600
+    end
+
     context 'with an :algorithm but no :secret_key' do
       it 'does not raises an error if the algorithm is "none" ' do
         action = -> { Toktok::Configuration.new(algorithm: 'none', secret_key: '') }

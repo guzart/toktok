@@ -49,6 +49,17 @@ describe Toktok::Token do
         expect(token1.jwt).to eq(token2.jwt)
       end
     end
+
+    context 'with a lifetime configuration' do
+      it 'sets the Expiration Time claim' do
+        prepare_config(lifetime: 3_600)
+        time = Time.local(2008, 9, 1, 10, 5)
+        Timecop.freeze(time) do
+          token = Toktok::Token.new(identity: 123)
+          expect(token.payload[:exp]).to eq(time.to_i + 3_600)
+        end
+      end
+    end
   end
 
   context 'when initialized with :jwt' do
