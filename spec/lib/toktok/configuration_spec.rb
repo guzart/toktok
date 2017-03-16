@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 RSpec.describe Toktok::Configuration do
   let(:secret_key) { 'f6bfddc1fabf88dc01a93f0d85f8b16d' }
   let(:config) { Toktok::Configuration.new(secret_key: secret_key) }

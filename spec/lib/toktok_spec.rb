@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 RSpec.describe Toktok do
   before(:each) { instance_double(Toktok::Configuration) }
 

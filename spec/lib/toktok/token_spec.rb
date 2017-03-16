@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe Toktok::Token do
   let(:algorithm) { 'HS256' }
   let(:secret_key) { '5ef620dda4ef4ee26b422c98609ca20a' }

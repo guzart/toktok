@@ -1,9 +1,7 @@
-require 'toktok/version'
-require 'jwt'
-
 module Toktok
   require 'toktok/configuration'
   require 'toktok/token'
+  require 'toktok/version'
 
   def self.algorithm=(value)
     @algorithm = value

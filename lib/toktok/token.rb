@@ -1,3 +1,5 @@
+require 'jwt'
+
 module Toktok
   InvalidIdentity = Class.new(StandardError)
 
