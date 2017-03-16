@@ -2,6 +2,7 @@ module Toktok
   class Configuration
     attr_reader :algorithm, :lifetime, :secret_key
 
+    # Error raised when an algorithm is given but the secret_key is missing.
     SecretKeyMissingError = Class.new(StandardError)
 
     def initialize(algorithm: nil, lifetime: nil, secret_key: nil)
