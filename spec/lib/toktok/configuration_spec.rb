@@ -10,6 +10,12 @@ RSpec.describe Toktok::Configuration do
       expect(config.algorithm).to eq('HS256')
     end
 
+    it 'defaults secret_key to ENV["SECRET_KEY_BASE"]' do
+      expect(ENV).to receive(:[]).with('SECRET_KEY_BASE').and_return('mysupersecretkey')
+      config = Toktok::Configuration.new
+      expect(config.secret_key).to eq('mysupersecretkey')
+    end
+
     it 'accepts an :algorithm argument' do
       config = Toktok::Configuration.new(algorithm: 'HS512', secret_key: secret_key)
       expect(config.algorithm).to eq('HS512')

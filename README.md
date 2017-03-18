@@ -26,8 +26,6 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Improve
-
 **Configuration**
 
 ```ruby
@@ -35,10 +33,10 @@ TODO: Improve
 Toktok.algorithm = 'HS256'
 
 # REQUIRED unless algorithm = 'none'
-Toktok.secret_key = ENV['TOKTOK_SECRET_KEY'] 
+Toktok.secret_key = ENV['SECRET_KEY_BASE']
 
 # OPTIONAL – in seconds
-Toktok.lifetime = nil 
+Toktok.lifetime = nil
 ```
 
 **Encode/Decode**
